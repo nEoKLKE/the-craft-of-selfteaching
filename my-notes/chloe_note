@@ -1,0 +1,14 @@
+1、git使用
+当我从原作者那里fork到自己的仓库，再创建分支from-chloe，在分支修改提交pull request的时候，提交的不是到fork的版本，而是直接到原作者仓库
+本地修改之后怎么提交原仓库的时候:
+
+git remote add upstream [https://github.com/selfteaching/the-craft-of-selfteaching.git](https://github.com/selfteaching/the-craft-of-selfteaching.git) 把原分支设为上游（本地master和分支都会变）
+git status 检测本地更新
+git add -a/git add filename,git commit -m "your note",git push origin master
+git status
+git fetch upstream 获取原仓库的更新
+git checkout master
+git merge upstream/master 合并远程的master分支
+git push 把本地仓库向github仓库推送
+再提交pull request
+原则重要修改用master并推送，练习用分支study
